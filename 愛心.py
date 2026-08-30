@@ -19,8 +19,8 @@ t_t=tk.Turtle() #畫樹用的海龜
 w_t=tk.Turtle() #畫波浪用的海龜
 
 h_t.goto(0,0)
-h_t.pencolor("#EE98FF") #設置畫筆的顏色
-h_t.fillcolor("#EE98FF") #填充顏色
+h_t.pencolor("#FF73F8") #設置畫筆的顏色
+h_t.fillcolor("#FF73F8") #填充顏色
 
 size=5
 change=0.5
@@ -38,7 +38,7 @@ def heart():
         h_t.goto(x,y)
 
     h_t.end_fill()
-    h_t.pencolor("#FFF200")
+    h_t.pencolor("#FFFB00")
     h_t.penup()
     h_t.goto(0,-20)
     h_t.write("LOVE",align='center',font=("Segoe Script",20)) #嵌入文字
@@ -78,7 +78,7 @@ def heart2(): #畫右上角的愛心
     h_t2.end_fill()
 
     h_t2.penup()
-    h_t2.pencolor("#FBFF07")
+    h_t2.pencolor("#FFFB29")
     h_t2.goto(375,315)
     h_t2.pendown()
     h_t2.write("O",align='center',font=("Playfair Display",20)) #嵌入文字
@@ -356,16 +356,16 @@ dot2=[] #設置存星星座標的串列
 def dot(): #星點
     tk.tracer(0)
     d_t.clear()
-    for i in range(1000):
+    for i in range(2000):
            d_t.penup()
-           if len(dot2)<1000: #星星的數量要小於1000顆
-             x=random.randint(-700,700)  #x與y的隨機取數範圍
-             y=random.randint(-400,400)
+           if len(dot2)<2000: #星星的數量要小於2000顆
+             x=random.randint(-900,900)  #x與y的隨機取數範圍
+             y=random.randint(-500,500)
              a=[-1,1] #星點移動的速度
              speed=random.choice(a)
              dot2.append([x,y,speed]) #加入串列
           
-           else: #如果星點數量大於1000顆
+           else: #如果星點數量大於2000顆
                   x=dot2[i][0]
                   y=dot2[i][1]   #儲存星星的座標
                   speed=dot2[i][2]
@@ -527,8 +527,3 @@ moon()
 tree()
 wave()
 tk.done()#讓視窗繼續保持開啟
-
-
-
-
-
