@@ -527,4 +527,3 @@ moon()
 tree()
 wave()
 tk.done()#讓視窗繼續保持開啟
-    
