@@ -526,7 +526,8 @@ dot()
 moon()
 tree()
 wave()
-tk.done()
+tk.done()#讓視窗繼續保持開啟
+
 
 
 
