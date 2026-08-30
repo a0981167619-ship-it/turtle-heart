@@ -19,8 +19,8 @@ t_t=tk.Turtle() #畫樹用的海龜
 w_t=tk.Turtle() #畫波浪用的海龜
 
 h_t.goto(0,0)
-h_t.pencolor("#FF73F8") #設置畫筆的顏色
-h_t.fillcolor("#FF73F8") #填充顏色
+h_t.pencolor('#FF99FF') #設置畫筆的顏色
+h_t.fillcolor('#FF99FF') #填充顏色
 
 size=5
 change=0.5
@@ -356,16 +356,16 @@ dot2=[] #設置存星星座標的串列
 def dot(): #星點
     tk.tracer(0)
     d_t.clear()
-    for i in range(2000):
+    for i in range(3000):
            d_t.penup()
-           if len(dot2)<2000: #星星的數量要小於2000顆
-             x=random.randint(-900,900)  #x與y的隨機取數範圍
-             y=random.randint(-500,500)
+           if len(dot2)<3000: #星星的數量要小於3000顆
+             x=random.randint(-1000,1000)  #x與y的隨機取數範圍
+             y=random.randint(-600,600)
              a=[-1,1] #星點移動的速度
              speed=random.choice(a)
              dot2.append([x,y,speed]) #加入串列
           
-           else: #如果星點數量大於2000顆
+           else: #如果星點數量大於3000顆
                   x=dot2[i][0]
                   y=dot2[i][1]   #儲存星星的座標
                   speed=dot2[i][2]
@@ -527,3 +527,4 @@ moon()
 tree()
 wave()
 tk.done()#讓視窗繼續保持開啟
+    
